@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 정의</title>
+</head>
+<body>
+    <script>
+        // 1. 일반적인 함수 정의
+        // 2. 함수 사용 후 정의를 이후에 작성해도 사용가능하다.(hoisting 기능)
+        var count = 0;
+        myFnc();
+        function myFnc(){
+            count++;
+            document.write("hello"+ count ,"<br>");
+        }
+
+        myFnc();
+        // 2. 익명 함수 선언 참조 방식
+        // 함수를 정의 이후에 사용 가능하다.
+        //theFnc(); // 익명 함수 선언 참조 방식의 잘못되 사용 예.
+        var theFnc = function(){
+            count++;
+            document.write("bye",count,"<br>");
+        }
+
+        theFnc();
+    </script>
+</body>
+</html>

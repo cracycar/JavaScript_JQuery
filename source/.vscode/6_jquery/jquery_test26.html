@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$.map() $.grep()</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            var arr1 = [{
+                "area":"서울",
+                "name":"무대리"
+            },{
+                "area":"부산",
+                "name":"홍과장"
+            },{
+                "area":"대전",
+                "name":"박사장"
+            },{
+                "area":"서울",
+                "name":"빅마마"
+            }]
+            // $.map(arr,function(a,b){})
+            // a : arr의 데이터값
+            // b : arr의 인덱스값
+            var arr2 = $.map(arr1,function(a,b){
+                if(a.area == "서울"){
+                    return a;
+                }
+            })
+            console.log(arr2);
+            console.log("=====First End=====");
+            // $.grep(arr,function(a,b){})
+            // a : arr의 데이터값
+            // b : arr의 인덱스값
+            // return 값이 true인 경우 저장
+            var arr3 = $.grep(arr1,function(a,b){
+                if(a.area == "서울"){
+                    return true;
+                } else{
+                    return false;
+                }
+            })
+            console.log(arr3);
+            console.log("=====Second End=====");
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

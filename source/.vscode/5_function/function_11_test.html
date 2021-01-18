@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성 함수 : 프로토타입사용 </title>
+</head>
+<body>
+    <script >
+        function CheckOverWeight(name, height, weight){
+            this.userName = name;
+            this.userHeight = height;
+            this.userWeight = weight;
+            this.minWeight;
+            this.maxWeight;
+        }
+
+        // 프로토타입을 사용한 함수 선언 및 정의
+        CheckOverWeight.prototype.getInfo = function(){
+            var str = "";
+            str += "이름: "+this.userName+",";
+            str += "키: " + this.userHeight+",";
+            str += "몸무게: " + this.userWeight+"<br>";
+            return str;
+        }
+
+        // 프로토타입을 사용한 함수 선언 및 정의
+        CheckOverWeight.prototype.getResult = function(){
+            this.minWeight = (this.userHeight - 100)*0.9 - 5;
+            this.maxWeight = (this.userHeight - 100)*0.9 + 5;
+
+            // 정상 몸무게
+            if(this.userWeight >= this.minWeight && this.userWeight <= this.maxWeight){
+                return "정상 몸무게입니다.";
+            }else if(this.userWeight < minWeight){
+                return "정상 몸무게보다 미달입니다.";
+            }else {
+                return "정상 몸무게보다 초과입니다.";
+            }
+        }
+
+        var jang = new CheckOverWeight("장보라",168,62);
+        var park = new CheckOverWeight("박달재",180,68);
+        console.log(jang);
+        console.log(park);
+
+        document.write(jang.getInfo());
+        document.write(jang.getResult(),"<br>");
+
+        document.write(jang.getResult === park.getResult);
+    </script>
+</body>
+</html>

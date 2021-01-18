@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저 객체 모델1</title>
+</head>
+<body>
+    <script>
+        // 브라우저 객체란?
+        // 브라우저에 내장된 객체를 '브라우저 객체'라고 한다.
+        // 최상위 객체는 window로 다음의 하위 객체를 가진다.
+        // - document       /     - screen      /       - location  
+        // - history        /     - navigator
+    </script>
+
+    <p>
+        <img src="images/window_object_1.jpg" usemap="#intro"  alt="신간 책 소개">
+        <!-- usemap 속성 : 이미지 내 맵(위치)를 지정하여 정해진 로직 수행 map tag의 name을 사용함.-->
+        <!-- 지정된 map의 area 클릭 시 창 닫기 수행-->
+        <map name="intro" id="intro">
+            <area shape="rect" coords="230,368,280,390" href="#" alt="창 닫기" onclick="window.close();">
+        </map>
+    </p>
+
+</body>
+</html>

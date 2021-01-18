@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교 연산자</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        var b = 20;
+        var c = 10;
+        var f = "20";
+        var result;
+
+        result = a > b;
+        document.write(result,"<br>");
+        result = a < b;
+        document.write(result,"<br>");
+        result = a <= b;
+        document.write(result,"<br>");
+        result = b == f; // == : 숫자의 경우 숫자만 일치하면 true
+        document.write(result,"<br>");
+        result = a != b;
+        document.write(result,"<br>");
+        result = b === f; // === : 숫자의 경우 자료형과 숫자가 모두 일치해야 true
+        document.write(result,"<br>");
+    </script>
+</body>
+</html>

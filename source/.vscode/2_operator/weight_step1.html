@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>적정 체중 구하기</title>
+</head>
+<body>
+    <script>
+        
+        var name; //이름
+        //적정체중 = (본인 신장 - 100) * 0.9;
+        var userHeight; // 본인 신장
+        var userWeight; // 본인 체중
+        var normal_w;   // 적정 체중
+
+        //1. 본인 이름 구하기
+        name = prompt("당신의 이름은?","");
+        //2. 신장 구하기
+        userHeight = prompt("당신의 키는?");
+        //3. 체중 구하기
+        userWeight = prompt("당신의 몸무게는?");
+
+        //4. 적정 체중 구하기
+        normal_w = (userHeight - 100) * 0.9;
+
+        var result = normal_w+5 >= userWeight && normal_w-5 <= userWeight;
+        
+        if(normal_w+5 < userWeight){ //표준 몸무게 보정
+            normal_w+=5;
+        };
+        result = result ? "적정체중입니다.":"비만입니다.";
+        document.write(name+"님은 "+result + " 적정 체중은 "+normal_w+"kg 입니다.");
+
+    </script>
+</body>
+</html>

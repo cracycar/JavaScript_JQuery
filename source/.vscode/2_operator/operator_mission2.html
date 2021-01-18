@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var q1_result = 1200;
+        var q2_result = 1300;
+        var q3_result = 1000;
+
+        var avg_result = ( q1_result + q2_result + q3_result )  / 3;
+        var q4_result = prompt("4분기 판매량은?",0);
+        var result = avg_result <= q4_result ? "평균 판매량 이상입니다." : "평균 판매량 미달입니다.";
+
+        document.write("전 분기 평균 판매량은 "+avg_result+ " 입니다."+"<br>");
+        document.write("4분기 판매량은 전 분기 "+result);
+    </script>
+
+</body>
+</html>

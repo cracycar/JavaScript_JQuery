@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery 선택자</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        // jquery가 body안의 객체를 읽은 후 실행되도록 아래와 같이 코딩한다.
+        // 1번 방법
+        //$(function(){
+        //    $("#title").css("color","red");
+        //});
+        // 2번 방법
+        $(document).ready(function(){
+            $("#title").css("color","red");
+        })
+    </script>
+</head>
+<body>
+    <h1 id="title">제목</h1>
+</body>
+</html>

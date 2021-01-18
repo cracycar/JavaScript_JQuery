@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.5.1.js"></script>
+    <title>전체 형제 요소 선택자(자신 제외)</title>
+    <script>
+        $(function(){
+            var style_1 = {"background-color":"#0ff",
+                        "border":"2px solid #f00"
+            };
+            var style_2 = {"background-color":"#ff0",
+                        "border":"2px dashed #f00"
+                        };
+            $(".txt").prevAll()
+            .css(style_1); // class txt 이전 모든 형 요소 선택
+            $(".txt").nextAll()
+            .css(style_2); // class txt 아래 모든 동생 요소
+        })
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p><!-- style_1-->
+        <p class="txt">내용2</p>
+        <p>내용3</p> <!-- style_2-->
+        <p>내용4</p> <!-- style_2-->
+    </div>
+</body>
+</html>

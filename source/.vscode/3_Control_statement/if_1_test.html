@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If문과 Number의 사용</title>
+</head>
+<body>
+    <script>
+        var walkAmount = prompt("당신의 하루 걷는 양은 몇 보인가요?","0");
+        
+        //숫자 입력 확인
+        // Number 함수는 숫자로 변환 할 수 없을 시 NaN 을 리턴함.
+        // 의미는 "Not a Number"
+        // NaN 체크 방법 : Number.isNaN(value) 로 확인.
+        var count_result = Number(walkAmount);
+        if( Number.isNaN(count_result) ){
+            document.write("숫자만 입력하세요.","<br>");
+        }else{
+            if (count_result >= 10000){
+                document.write("매우 좋은 습관을 지니고 계시는군요!!","<br>");
+            }
+        }
+        document.write("============= The End =============");
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>종속선택자</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        //요소명#id : 요소에 id가 사용된 경우에만 적용
+        //요소명.class명 : 요소에 class명이 사용된 경우에만 적용
+        // 주의사항 : 요소명과 id ,class 사이에 띄어쓰기 사용하면 안됨(하위 선택자가 됨) 
+        $(function(){
+            $("h1.tit").css("background-color","#0ff")
+            .css("border","2px dashed #f00");
+        });
+    </script>
+</head>
+<body>
+    <h1 class="tit">제이쿼리</h1>
+    <h2>선택자</h2>
+    <h3 class="tit">직접 선택자</h3>
+</body>
+</html>

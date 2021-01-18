@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elseif문 사용</title>
+</head>
+<body>
+    <script>
+        var mon = prompt("현재는 몇 월입니까?","0");
+
+        var mon_to_num = Number(mon);
+
+        if(Number.isNaN(mon_to_num)){
+            document.write("숫자를 입력하세요.","<br>");
+        }else if(mon_to_num < 1  || mon_to_num > 12){
+            document.write("1~12 사이의 숫자를 입력하세요.","<br>");
+        }else{
+            if(mon_to_num >= 9 && mon_to_num <= 11){
+                document.write("독서의 계절 가을이네요.","<br>");
+            }else if(mon_to_num >= 6 && mon_to_num<=8){
+                document.write("여행가기 좋은 여름이네요.","<br>");
+            }else if(mon_to_num >= 3 && mon_to_num <=5){
+                document.write("햇살 가득한 봄이네요!!","<br>");
+            }else{
+                document.write("스키의 계절 겨울이네요!!","<br>");
+            }
+        }
+        document.write("====== End ======");
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문 사용2</title>
+</head>
+<body>
+    <script>
+        // 조건문에 사용되었을 때 false 로 인식되는 경우
+        // 1. 표현결과가 false인 경우
+        // 2. 표현결과가 0,null,"",undefined 인 경우
+        var min = prompt("당신의 하루 통화량은 몇 분인가요?","0");
+
+        var min_to_num = Number(min);
+        if(Number.isNaN(min_to_num)){
+            document.write("숫자만 입력하세요.");
+        }else{
+            if(min_to_num >= 60){
+                document.write("많이 사용하는 편이네요","<br>");
+            }else{
+                document.write("적당히 사용하는 편이네요.","<br>");
+            }
+        }
+        document.write("============= The End =============");
+    </script>
+</body>
+</html>

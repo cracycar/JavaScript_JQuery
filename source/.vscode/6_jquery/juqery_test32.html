@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find(),flter() 탐색 선택자</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            // inner_1 아이디 하위 요소 중 txt2 class만 css 적용
+            $("#inner_1").find(".txt1")
+            .css({"background-color":"#ff0"});
+
+            // inner_1 아이디 하위 p 요소 중 txt2 class만 css 적용
+            $("#inner_1 p").filter(".txt2")
+            .css({"background-color":"#0ff"});
+
+            // inner_2 아이디 하위 p 요소들에 function 실행 및 return값이 true이 경우에만  css 적용
+            $("#inner_2 p").filter(function(idx, obj){
+                console.log(idx);
+                return idx%2 ==0;
+            }).css({"background-color":"#0f0"});
+        });
+    </script>
+</head>
+<body>
+    <div id="outer_wrap">
+        <h1>콘텐츠 탐색 선택자</h1>
+        <section id="inner_1">
+            <h2>find(), filter()</h2>
+            <p class="txt1">내용1</p>
+            <p class="txt1">내용2</p>
+        </section>
+        <section id="inner_2">
+            <h2>filter(function)</h2>
+            <p>index 0</p>
+            <p>index 1</p>
+            <p>index 2</p>
+            <p>index 3</p>
+        </section>
+    </div>
+</body>
+</html>

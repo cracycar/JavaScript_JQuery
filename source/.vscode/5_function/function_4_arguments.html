@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>argument 변수</title>
+</head>
+<body>
+    <script>
+        // arguments 배열 사용
+        function sum(){
+            var sum = arguments[0] + arguments[1] + arguments[2];
+            document.write(sum);
+        }
+        // , 단위로 데이터를 입력하면, arguments 배열 형태로 전달됨.
+        sum(10,20,30);
+
+        function sum2(){
+            var sum = 0;
+            for( var i = 0;  i < arguments.length ; i++){
+                var num = Number(arguments[i]);
+                if ( !(Number.isNaN(num)) ) {
+                    sum += num;
+                }
+            }
+
+            document.write(sum);
+        }
+        //개 수 가변 사용 가능.
+        sum2(10,20,30,40,50,"60","육십",70);
+    </script>
+</body>
+</html>

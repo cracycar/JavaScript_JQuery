@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디 선택자</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            // #id명 으로 요소 선택
+            //id가 tit인 요소(태그)의 css속성을 정의한다.
+            $("#tit").css("background-color","#ff0") // 첫번째 css 정의
+            .css("border","2px solid #f00"); // 두번째 css 정의
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리</h1>
+    <h2 id="tit">선택자</h2>
+    <h3>직접 선택자</h3>
+</body>
+</html>

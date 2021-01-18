@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수의 스코프</title>
+</head>
+<body>
+    <script>
+        var num = 100;
+        function menu() {
+            num += 100;
+            alert(num);
+        }
+        menu();
+
+        // menu라는 펑션이 재선언되어 하기 펑션이 실행됨(위 펑션은 실행 x)
+        function menu(){
+            alert(num);
+        }
+    </script>
+</body>
+</html>

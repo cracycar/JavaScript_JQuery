@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인접 관계 선택자</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        //직접선택자의 인접한 요소들을 선택
+        //부모 요소 선택 : $().parent()
+        //다음 요소 선택 : $().next()
+        //이전 요소 선택 : $().prev()
+        $(function(){
+            $("#list_1").parent()
+            .css("border","2px dashed #f00");
+        });
+    </script>
+</head>
+<body>
+    <h1>인접 관계 선택자</h1>
+    <ul id="warp">
+        <li>리스트1
+            <ul>
+                <li id="list_1">리스트1-1</li>
+                <li>리스트1-2</li>
+            </ul>
+        </li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
+</body>
+</html>

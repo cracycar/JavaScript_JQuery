@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 그룹 선택자</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            //다중의 요소들을 선택할 때 사용(id / class / 요소명 섞어서 사용 가능)
+            $("#tit3, h1").css("background-color","#0ff")
+            .css("border","2px dashed #f00");
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리</h1>
+    <h2>선택자</h2>
+    <h3 id="tit3">직접 선택자</h3>
+    <h3>인접 선택자</h3>
+</body>
+</html>
