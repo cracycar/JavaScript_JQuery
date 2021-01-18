@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체조작 : 속성 조작 메서드</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            // .html() : 해당되는 html 요소를 선택한다.
+            // .html(내용) : 선택자에 의해 선택된 요소를 내용 요소로 변경한다.
+            var result_1 = $("#sec_1").html();
+            console.log(result_1);
+            $("#sec_1 p").html("<a href=\"#\">Text1</a>");
+            // .text() : 해당되는 text 요소를 선택한다.
+            // .text(내용) : 선택자에 의해 선택된 요소의 Text를 내용 으로 변경한다.
+            var result_2 = $("sec_2").text();
+            console.log(result_2);
+            $("#sec_2 h2").text("text()");
+        })
+    </script>
+</head>
+<body>
+    <h1>
+        <strong>객체 조작 및 생성</strong>
+    </h1>
+    <section id="sec_1">
+        <h2><em>html()</em></h2>
+        <p>내용1</p>
+    </section>
+    <section id="sec_2">
+        <h2><em>텍스트()</em></h2>
+        <p>내용2</p>
+    </section>
+</body>
+</html>
