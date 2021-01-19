@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체조작 : 속성 조작 메서드</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            //li:리스트에 이어서 연결
+            $("<li>appendTo</li>").appendTo("#listZone");
+            //li:리스트 전에 insert
+            $("#listZone").prepend("<li>prepend</li>");
+        });
+    </script>
+</head>
+<body>
+    <ul id="listZone">
+        <li>리스트</li>
+    </ul>
+</body>
+</html>

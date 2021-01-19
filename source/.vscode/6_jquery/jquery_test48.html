@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체조작 : 속성 조작 메서드</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            // 내용3만 선택
+            $("#myList li:eq(2)").css({"background-color":"yellow"});
+           //$("#myList li:not(0)").attr({"background-color":"#f00"})
+
+        });
+    </script>
+</head>
+<body>
+    <ul id="myList">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+</body>
+</html>
