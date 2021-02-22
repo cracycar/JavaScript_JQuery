@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효과 함수 기본형</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            $(".btn2").hide();
+            // 효과 함수 기본 형태
+            // $(요소).효과함수(효과지속시간,투명도(or 가속도),콜백함수)
+            $(".btn1").on("click",function(){
+                $(".box").slideUp(1000,"linear",
+                function(){
+                    $(".btn1").hide();
+                    $(".btn2").show();
+                });
+            });
+
+            $(".btn2").on("click",function(){
+                $(".box").fadeIn(1000,"swing",
+                function(){
+                    $(".btn2").hide();
+                    $(".btn1").show();
+                });
+            });
+            // box 요소가 접히거나 펴집니다.
+            $(".btn3").on("click",function(){
+                $(".box").slideToggle(1000,"linear");
+            });
+
+            //box 요소가 70퍼센트 흐려진다.
+            $(".btn4").on("click", function(){
+                $(".box").fadeTo("fast",0.3);
+            });
+
+            // box 요소를 다시 원상태로 복귀
+            $(".btn5").on("click",function(){
+                $(".box").fadeTo("fast",1);
+            })
+        });
+    </script>
+    <style>
+        .content{
+            width: 400px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <button class="btn1">slideUp</button>
+        <button class="btn2">fadeIn</button>
+    </p>
+    <p>
+        <button class="btn3">toggleSlide</button>
+    </p>
+    <p>
+        <button class="btn4">fadeTo(0.3)</button>
+        <button class="btn5">fadeTo(1)</button>
+    </p>
+    <div class="box">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut....
+        </div>
+    </div>
+</body>
+</html>
