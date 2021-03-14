@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                url : "news_set.php",
+                dataType : "xml",
+                success:function(data){
+                    var $items = $(data).find("item");
+
+                    if($items.length >0){
+                        $items.slice(0,10);
+                        var $ulTag = $("<ul/>"); // list ul 생성
+                        $.each($items, function(i,o){
+                            var $title = $(o).find("title").text();
+                            var $link = $(o).find("link").text();
+                            var $aTag = $("<a/>")
+                            .attr({
+                                "href":$link,
+                                "target":"_blank"
+                            })
+                            .text($title);
+                            // list 태그 생성 후, a tag 삽입
+                            var $liTag = $("<li/>")
+                            .append($aTag);
+                            //ul tag에 li tag append
+                            $ulTag.append($liTag);
+                        });
+                        $(".wrap").append($ulTag);
+                    }
+                }
+            });
+        });
+    </script>
+    <title>Ajax xml Cross Domain</title>
+</head>
+<body>
+    <div class="wrap"></div>
+</body>
+</html>

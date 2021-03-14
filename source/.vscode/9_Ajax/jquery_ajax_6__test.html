@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            var href = "http://localhost/member_test.php?callback=myFnc";
+            $.ajax({
+                url : href,
+                dataType : "jsonp",
+            }).done(function myFnc(data){
+                console.log(data);
+            });
+        });
+    </script>
+    <title>Ajax xml Cross Domain</title>
+</head>
+<body>
+    <div class="wrap"></div>
+</body>
+</html>
